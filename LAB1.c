@@ -66,7 +66,6 @@ int index=0;
 for(int i=0;i<5;i++){
     if(a[i]==search){
         index=i;
-        break;
     }
 
 }
@@ -75,7 +74,7 @@ printf("\n%d found at %d\n",search,index);
 
 //INSERTION AT GIVEN POSITION 
   int a[6]={};
-for(int i=0;i<6;i++){
+for(int i=0;i<5;i++){
     scanf("%d",&a[i]);
 }
 for(int i=0;i<6;i++){
@@ -97,7 +96,7 @@ for(int i=0;i<6;i++){
 
 //INSERTION (BEGINNING)
 int a[6]={};
-for(int i=0;i<6;i++){
+for(int i=0;i<5;i++){
     scanf("%d",&a[i]);
 }
 for(int i=0;i<6;i++){
@@ -119,7 +118,7 @@ for(int i=0;i<6;i++){
 
 //INSERTION(END)
 int a[6]={};
-for(int i=0;i<6;i++){
+for(int i=0;i<5;i++){
     scanf("%d",&a[i]);
 }
 for(int i=0;i<6;i++){
@@ -151,7 +150,7 @@ for(int i=0;i<6;i++){
 
 printf("\n");
 int pos=2;
-for(int i=pos;i<6;i++){
+for(int i=pos;i<5;i++){
     a[i]=a[i+1];  
 }
 for(int i=0;i<5;i++){
@@ -172,7 +171,7 @@ for(int i=0;i<6;i++){
 }
 printf("\n");
 int pos=0;
-for(int i=pos;i<6;i++){
+for(int i=pos;i<5;i++){
     a[i]=a[i+1];
 }
 for(int i=0;i<5;i++){
@@ -191,10 +190,7 @@ for(int i=0;i<6;i++){
 
 }
 printf("\n");
-int pos=5;
-for(int i=pos;i<6;i++){
-    a[i]=a[i+1];
-}
+
 for(int i=0;i<5;i++){
     printf("%d",a[i]);
 
