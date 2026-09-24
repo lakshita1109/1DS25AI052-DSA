@@ -1,0 +1,38 @@
+// Compare Triplets
+int* compareTriplets(int a_count, int* a, int b_count, int* b, int* result_count) {
+int *result=malloc(2*sizeof(int));
+int alice=0;
+int bob=0;
+for(int i=0;i<3;i++){
+    if(a[i]>b[i]){
+        alice++;
+    }
+    else if(b[i]>a[i]){
+        bob++;
+    }
+}
+result[0]=alice;
+result[1]=bob;
+*result_count=2;
+return result;
+}
+
+// min max
+void miniMaxSum(int arr_count, int* arr) {
+long sum=0;
+int min=arr[0];
+int max=arr[0];
+for(int i=0;i<5;i++){
+    sum+=arr[i];
+    if(arr[i]>max){
+        max=arr[i];
+       
+    }
+    if(arr[i]<min){
+    min=arr[i];
+    }
+}
+long min_sum=sum-max;
+long max_sum=sum-min;
+printf("%ld %ld",min_sum,max_sum);
+}
