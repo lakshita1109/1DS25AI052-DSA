@@ -1,0 +1,44 @@
+//POSTFIX
+#include <bits/stdc++.h>
+using namespace std;
+#define MAX 100
+
+int main() {
+    stack<int> st;
+
+    int a, b, result;
+
+    string postfix;
+    cin >> postfix;
+
+    for (int i = 0; i < postfix.size(); i++) {
+        if (isdigit(postfix[i])) {
+
+            st.push(postfix[i] - '0');
+        }
+        else {
+            b = st.top();
+            st.pop();
+
+            a = st.top();
+            st.pop();
+
+            if (postfix[i] == '+') {
+                result = a + b;
+                st.push(result);
+            }
+            else if (postfix[i] == '-') {
+                result = a - b;
+                st.push(result);
+            }
+            else if (postfix[i] == '*') {
+                result = a * b;
+                st.push(result);
+            }
+        }
+    }
+
+    cout << "Result" << st.top();
+
+    return 0;
+}
